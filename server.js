@@ -24,9 +24,9 @@ app.use('/api/appointments', appointmentRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/barbers', barberRoutes);
 
-// Simple route for testing
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Aakash Salon API' });
+// API root endpoint
+app.get('/api', (req, res) => {
+  res.json({ message: 'Welcome to Aakash Salon API', status: 'API is running' });
 });
 
 // Set port
